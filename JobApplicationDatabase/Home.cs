@@ -28,24 +28,26 @@ namespace JobApplicationDatabase
 
         private void addJob_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string sql = "select Company from applications";
-                command = new SqlCommand(sql, conn);
-                conn.Open();
-                dbReader = command.ExecuteReader();
-                dbReader.Read();
+            AddJob form = new AddJob();
+            form.ShowDialog();
+            //try
+            //{
+            //    string sql = "select Company from applications";
+            //    command = new SqlCommand(sql, conn);
+            //    conn.Open();
+            //    dbReader = command.ExecuteReader();
+            //    dbReader.Read();
 
-                if (dbReader.HasRows)
-                {
-                    addJob.Text = dbReader.GetString(0);
-                    conn.Close();
-                }
-            }
-            catch
-            {
-                errorMessage.Text = "Connection Failed";
-            }
+            //    if (dbReader.HasRows)
+            //    {
+            //        addJob.Text = dbReader.GetString(0);
+            //        conn.Close();
+            //    }
+            //}
+            //catch
+            //{
+            //    errorMessage.Text = "Connection Failed";
+            //}
             
         }
     }
