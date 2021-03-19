@@ -16,3 +16,4 @@ Named and positioned button and text boxes on Add Job screen. <br/>
 
 <b>March 19, 2021</b><br/>
 Added functionality to the Add Job screen so that all fields now populate the DB once the Submit button is pressed.<br/>
+Error Message is shown if all required fields have not been filled out.<br/>
