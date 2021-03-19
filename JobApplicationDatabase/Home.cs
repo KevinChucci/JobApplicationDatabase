@@ -14,15 +14,15 @@ namespace JobApplicationDatabase
     
     public partial class Home : Form
     {
-        SqlConnection conn;
-        SqlDataReader dbReader;
-        SqlCommand command;
+        //SqlConnection conn;
+        //SqlDataReader dbReader;
+        //SqlCommand command;
         string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Kevin Chucci\source\repos\JobApplicationDatabase\JobApplicationDatabase\Jobs.mdf;Integrated Security = True";
 
         public Home()
         {
             InitializeComponent();
-            conn = new SqlConnection(connectionString);
+            //conn = new SqlConnection(connectionString);
             errorMessage.Text = "";
         }
 
