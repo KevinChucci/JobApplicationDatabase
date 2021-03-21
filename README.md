@@ -1,5 +1,5 @@
 # JobApplicationDatabase [COMPLETE]
-I created this application to easily keep track of places I had applied to within a database.
+I created this application to easily keep track of places I had applied to within a database. It is a very simple program.
 
 <b>March 17, 2021</b><br/>
 Created repository on GitHub for the application.<br/>
