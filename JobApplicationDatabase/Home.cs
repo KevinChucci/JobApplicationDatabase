@@ -14,41 +14,36 @@ namespace JobApplicationDatabase
     
     public partial class Home : Form
     {
-        //SqlConnection conn;
-        //SqlDataReader dbReader;
-        //SqlCommand command;
+        SqlConnection conn;
+        SqlDataReader dbReader;
+        SqlCommand command;
         string connectionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Kevin Chucci\source\repos\JobApplicationDatabase\JobApplicationDatabase\Jobs.mdf;Integrated Security = True";
-
         public Home()
         {
             InitializeComponent();
-            //conn = new SqlConnection(connectionString);
+            conn = new SqlConnection(connectionString);
             errorMessage.Text = "";
+
+            string sqlSelect = "select count(*) from applications";
+            command = new SqlCommand(sqlSelect, conn);
+            conn.Open();
+            dbReader = command.ExecuteReader();
+            dbReader.Read();
+
+            count_Label.Text = dbReader.GetInt32(0).ToString() + " Applications Sent Out";
+            conn.Close();
         }
 
         private void addJob_Click(object sender, EventArgs e)
         {
             AddJob form = new AddJob();
-            form.ShowDialog();
-            //try
-            //{
-            //    string sql = "select Company from applications";
-            //    command = new SqlCommand(sql, conn);
-            //    conn.Open();
-            //    dbReader = command.ExecuteReader();
-            //    dbReader.Read();
+            form.ShowDialog();    
+        }
 
-            //    if (dbReader.HasRows)
-            //    {
-            //        addJob.Text = dbReader.GetString(0);
-            //        conn.Close();
-            //    }
-            //}
-            //catch
-            //{
-            //    errorMessage.Text = "Connection Failed";
-            //}
-            
+        private void searchJobs_Click(object sender, EventArgs e)
+        {
+            SearchJobs form = new SearchJobs();
+            form.ShowDialog();
         }
     }
 }
