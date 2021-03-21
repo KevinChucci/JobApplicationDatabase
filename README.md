@@ -13,3 +13,7 @@ Set up a simple query to test the connection to the database attached to the pre
 <b>March 18, 2021</b><br/>
 Added buttons and text boxes to Add Job screen. <br/>
 Named and positioned button and text boxes on Add Job screen. <br/>
+
+<b>March 19, 2021</b><br/>
+Added functionality to the Add Job screen so that all fields now populate the DB once the Submit button is pressed.<br/>
+Error Message is shown if all required fields have not been filled out.<br/>
