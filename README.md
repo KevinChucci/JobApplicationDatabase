@@ -1,4 +1,4 @@
-# JobApplicationDatabase
+# JobApplicationDatabase [COMPLETE]
 I created this application to easily keep track of places I had applied to within a database.
 
 <b>March 17, 2021</b><br/>
@@ -17,3 +17,9 @@ Named and positioned button and text boxes on Add Job screen. <br/>
 <b>March 19, 2021</b><br/>
 Added functionality to the Add Job screen so that all fields now populate the DB once the Submit button is pressed.<br/>
 Error Message is shown if all required fields have not been filled out.<br/>
+
+<b>March 20, 2021</b><br/>
+Added all functionality to the Search Jobs screen. <br/>
+Added and designed the Information screen, and added functionality. <br/>
+Removed the View All screen. <br/>
+Played around with creating a setup.exe and installing program onto my PC. <br/>
